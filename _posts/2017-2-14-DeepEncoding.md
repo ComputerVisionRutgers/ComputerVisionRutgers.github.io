@@ -49,3 +49,13 @@ efficient GPU implementation using Torch ([github](https://github.com/zhanghang1
 
 By [Hang Zhang](http://hangzh.com/), originally posted on [blog](http://zhanghang1989.github.io/DeepEncoding/).
 
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=736902629697855";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="http://zhanghang1989.github.io/DeepEncoding/" data-width="800" data-numposts="5" data-order-by="reverse_time"></div>
