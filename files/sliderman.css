@@ -1,4 +1,4 @@
-#slider_container_2 { float: left; margin: 0 0 0 -15px; padding: 15px; width: 700px; background: url(../img/bg.png) no-repeat 0 0; }
+#slider_container_2 { float: left; margin: 0 0 0 -15px; padding: 15px; width: 700px; background: url(http://zhanghang1989.github.io/img/bg.png) no-repeat 0 0; }
 
 .SliderName_2 {
 	float: left;
@@ -8,7 +8,7 @@
 }
 
 .SliderNamePrev_2 {
-	background: url(../img/left.png) no-repeat left center;
+	background: url(http://zhanghang1989.github.io/img/left.png) no-repeat left center;
 	width: 50px;
 	height: 450px;
 	display: block;
@@ -19,7 +19,7 @@
 }
 
 .SliderNameNext_2 {
-	background: url(../img/right.png) no-repeat right center;
+	background: url(http://zhanghang1989.github.io/img/right.png) no-repeat right center;
 	width: 50px;
 	height: 450px;
 	display: block;
@@ -55,10 +55,10 @@
 	border: none;
 	width: 16px;
 	height: 16px;
-	background: url(../img/bullet.png) no-repeat center center;
+	background: url(http://zhanghang1989.github.io/img/bullet.png) no-repeat center center;
 }
 
 #SliderNameNavigation_2 a.active img
 {
-	background: url(../img/bullet_active.png) no-repeat center center;
+	background: url(http://zhanghang1989.github.io/img/bullet_active.png) no-repeat center center;
 }
