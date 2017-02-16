@@ -3,6 +3,8 @@ layout: post
 title: Deep Encoding 
 ---
 
+<div style="text-align:center"><img src ="https://raw.githubusercontent.com/zhanghang1989/Deep-Encoding/master/images/classic.png" width="700" /></div>	
+
 This is a CVPR 2017 submission [Deep TEN: Texture Encoding Network](https://arxiv.org/pdf/1612.02844v1.pdf). 
 Here we share the idea of this paper briefly.  
 We integrate the entire dictionary learning and encoding framework into a single CNN model. 
@@ -13,7 +15,6 @@ by joint training with CIFAR-10 dataset.
 
 ### Approaches
 
-<div style="text-align:center"><img src ="https://raw.githubusercontent.com/zhanghang1989/Deep-Encoding/master/images/classic.png" width="700" /></div>	
 
 This work is mainly inspired by the classic vision approaches: given an input image, 
 dense features are usually extracted (such as hog, SIFT or filterbank responses). 
