@@ -13,6 +13,10 @@
  *      derived from this software 
  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  */
+body{
+	font-size: 150%;
+}
+
 .navbar-default {
 		  background-color: #006666;
 		  border-color: #84c515;
