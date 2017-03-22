@@ -16,12 +16,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- TODO FIXME update the tittle and description -->
-		<title>Rutgers Computer Vision Group</title>
-		<meta name="description" content="Rutgers Computer Vision">
+		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 		<meta name="author" content="Hang Zhang">
+	  	{% include meta.html %}
 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="http://computervisionrutgers.github.io/files/mvlab.css"/>
