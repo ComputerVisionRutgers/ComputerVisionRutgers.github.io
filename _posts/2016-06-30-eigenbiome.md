@@ -1,7 +1,7 @@
 ---
 layout: post
 title: |
-|From Photography to Microbiology:
+|From Photography to Microbiology-
 |Eigenbiome Models for Skin Appearance'
 ---
 	
