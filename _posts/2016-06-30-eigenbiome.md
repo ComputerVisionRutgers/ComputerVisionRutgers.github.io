@@ -1,9 +1,10 @@
 ---
 layout: post
-title: From Photography to Microbiology: Eigenbiome Models for Skin Appearance
+title: From Photography to Microbiology-  \nEigenbiome Models for Skin Appearance
 ---
 	
 <div style="text-align:left"><img src ="https://raw.githubusercontent.com/parneetk/parneetk.github.io/master/images/microbiome-teaser.png" width="300" /></div>
+
 Skin appearance modeling using high resolution photography has led to advances in recognition, rendering and analysis. Computational appearance provides an exciting new opportunity for integrating macroscopic imaging and microscopic biology. Recent studies indicate that skin appearance is dependent on the unseen distribution of microbes on the skin surface, i.e. the skin microbiome. While modern sequencing methods can be used to identify microbes, these methods are costly and time-consuming. We develop a computational skin texture model to characterize image-based patterns and link them to underlying microbiome clusters. The pattern analysis uses ultraviolet and blue fluorescence multimodal skin photography. The intersection of appearance and microbiome clusters reveals a pattern of microbiome that is predictable with high accuracy based on skin appearance. Furthermore, the use of non-negative matrix factorization allows a representation of the microbiome eigenvector as a physically plausible positive distribution of bacterial components.
 
 
