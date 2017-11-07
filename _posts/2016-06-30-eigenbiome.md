@@ -1,6 +1,6 @@
 ---
 layout: post
-title: From Photography to Microbiology-  \nEigenbiome Models for Skin Appearance
+title: 'From Photography to Microbiology-  \nEigenbiome Models for Skin Appearance'
 ---
 	
 <div style="text-align:left"><img src ="https://raw.githubusercontent.com/parneetk/parneetk.github.io/master/images/microbiome-teaser.png" width="300" /></div>
