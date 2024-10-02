@@ -313,7 +313,8 @@ height: 100vh;
 video {
 width: 100%;
 height: 100%;
-object-fit: cover;
+max-height: 600px;
+object-fit: contain;
 }
 .flex-direction-nav a{
 display:none;
@@ -324,18 +325,13 @@ left:0px;
 .flex-direction-nav.flex-next{ 
 right:0px;
 }
-.flex-caption {zoom: 1;
-bottom: 198px; 
-background-color: transparent; 
-color: #fff; 
-margin: 0; 
-padding: 25px 25px 25px 30px; 
-position: absolute; 
-left: 0; 
+.flex-caption {
+position: absolute;
+bottom: 30px; /* adjust this to your liking */
+left: 0;
+right: 0;
 text-align: center;
-margin: 0 auto;
-right: 0px;
-display: inline-block;
+color: #fff;
 }
 .flex-caption h3 {color: #fff; 
 letter-spacing: 1px; 
