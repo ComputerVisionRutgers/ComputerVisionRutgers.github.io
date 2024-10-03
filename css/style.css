@@ -343,22 +343,6 @@ transform: translate(-50%, -50%);
 text-align: center;
 z-index: 2;
 }
-
-.flex-caption {
-	zoom: 1;
-	background-color: transparent; 
-	color: #fff; 
-	padding: 25px 25px 25px 30px; 
-	position: relative; 
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
-	height: 100vh; 
-	width: 100vw; 
-	z-index: 2;
-	max-width: 50%;
-	margin: auto;
-  }
 .flex-caption h3 {color: #fff; 
 letter-spacing: 1px; 
 margin-bottom: 8px; 
