@@ -1035,7 +1035,6 @@ h4.heading {
 	
 }
 
-
 .widgetheading {
 	width:100%;
 
@@ -1132,7 +1131,6 @@ ul.team-detail li ul.social-network li i {
 	margin:0;
 }
 
- 
 .pricing-title{
 	background:#fff;
 	text-align:center;
@@ -1387,8 +1385,6 @@ ul.social-network li {
 	float:right;
 }
 
-  
-
 /* scroll to top */
 .scrollup{
     position:fixed;
@@ -1417,9 +1413,6 @@ a.scrollup i {
 a.scrollup i:hover {
 	text-decoration:none;
 }
-
-
-
  
 .absolute{
 	position:absolute;
