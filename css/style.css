@@ -336,17 +336,13 @@ right:0px;
 zoom: 1;
 background-color: transparent; 
 color: #fff; 
-padding: 25px 25px 25px 30px; 
 position: absolute; 
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 text-align: center;
-margin: auto;
 z-index: 2;
-max-width: 50%;
-  }
+}
 .flex-caption h3 {color: #fff; 
 letter-spacing: 1px; 
 margin-bottom: 8px; 
