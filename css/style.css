@@ -343,7 +343,27 @@ left: 50%;
 transform: translate(-50%, -50%);
 text-align: center;
 z-index: 2;
-font-size: clamp(1rem, 2.5vw, 2.5rem);
+font-size: 2.5rem;
+}
+@media (max-width: 1200px) {
+    .flex-caption {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 992px) {
+    .flex-caption {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .flex-caption {
+        font-size: 1.25rem;
+    }
+}
+@media (max-width: 576px) {
+    .flex-caption {
+        font-size: 1rem;
+    }
 }
 .flex-caption h3 {color: #fff; 
 letter-spacing: 1px; 
