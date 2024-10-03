@@ -343,7 +343,7 @@ left: 50%;
 transform: translate(-50%, -50%);
 text-align: center;
 z-index: 2;
-max-width: 80%;
+max-width: 50%;
 margin: 0 auto;
 }
 .flex-caption h3 {color: #fff; 
