@@ -310,6 +310,9 @@ zoom: 1;
 width: 100vw;
 height: 100vh;
 max-height: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 video {
 width: 100%;
@@ -329,12 +332,15 @@ left:0px;
 .flex-direction-nav.flex-next{ 
 right:0px;
 }
-.flex-caption {zoom: 1;
+.flex-caption {
+zoom: 1;
 background-color: transparent; 
 color: #fff; 
 padding: 25px 25px 25px 30px; 
-position: relative; 
-left: 0; 
+position: absolute; 
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 text-align: center;
 z-index: 2;
 }
