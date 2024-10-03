@@ -193,6 +193,14 @@ header .nav li .dropdown-menu li a {
    padding: 3px 12px;
 }
 
+.snop_title {
+    text-align: center;
+}
+
+.snop_text {
+    text-align: left;
+}
+
 /* --- menu --- */
 
 header .navigation {
