@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="Busch-6KM - Ryan Meegan, Adam D'Souza, Kristin Dana">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="Busch‑6KM is a visual navigation dataset collected on the Busch Campus of Rutgers University in New Jersey, United States during the Summer and Fall of 2024 and 2025. It supports the development and evaluation of deep learning–based models for navigation and visual place recognition, particularly those fusing Wi‑Fi and visual data.">
+  <meta name="keywords" content="Visual navigation, machine learning, computer vision">
+  <meta name="author" content="Ryan Meegan, Adam D'Souza, Kristin Dana">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Rutgers University Computer Vision Lab">
+  <meta property="og:title" content="Busch-6KM">
+  <meta property="og:description" content="Busch‑6KM is a visual navigation dataset collected on the Busch Campus of Rutgers University in New Jersey, United States during the Summer and Fall of 2024 and 2025. It supports the development and evaluation of deep learning–based models for navigation and visual place recognition, particularly those fusing Wi‑Fi and visual data.">
+  <meta property="og:url" content="ajd324.github.io">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- X -->
+  <meta name="x:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution X handle -->
+  <meta name="x:site" content="@YOUR_X_HANDLE">
+  <!-- TODO: Replace with first author's X handle -->
+  <meta name="x:creator" content="@AUTHOR_X_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="x:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="x:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="x:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="x:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="Busch-6KM">
+  <meta name="citation_author" content="Meegan, Ryan">
+  <meta name="citation_author" content="D'Souza, Adam">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="CVPR">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>Reality Aware Networks Busch-6KM</title>
+  
+  <!-- Favicon and App Icons -->
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">-->
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PAPER_TITLE",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://x.com/YOUR_x_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Main Website Button -->
+  <div class="more-works-container">
+    <a href="https://computervisionrutgers.github.io/RAN/" 
+      class="external-link button is-normal is-rounded is-dark"
+      title="Visit Main Website">
+      <span class="icon">
+        <i class="fas fa-home"></i>
+      </span>
+      <span>Main Website</span>
+    </a>
+  </div>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Reality Aware Networks (RAN): Busch-6KM Dataset</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/RNGmeg" target="_blank">Ryan Meegan</a><sup></sup>,</span>
+                <span class="author-block">
+                  <a href="https://github.com/ajd324" target="_blank">Adam D'Souza</a><sup></sup>,</span>
+                  <span class="author-block">
+                    <a href="https://eceweb1.rutgers.edu/~kdana/" target="_blank">Kristin Dana</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 has-text-centered" style="margin-top: 0.5em; color: rgb(168, 3, 3); font-weight: bold;">
+                    Rutgers University
+                 </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <!-- Commented out Paper -->
+                      <!--
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                          </span>
+                          <span>Paper</span>
+                        </a>
+                      </span>
+                      -->
+
+                      <!-- Commented out Supplementary -->
+                      <!--
+                      <span class="link-block">
+                        <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                          </span>
+                          <span>Supplementary</span>
+                        </a>
+                      </span>
+                      -->
+
+                      <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="ai ai-arxiv"></i>
+                          </span>
+                          <span>arXiv (Coming Soon)</span>
+                        </a>
+                      </span>
+
+                       <!-- TODO: Replace with your GitHub repository URL -->
+                      <span class="link-block">
+                        <a href="https://github.com/YOUR-REPO-HERE" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fab fa-github"></i>
+                          </span>
+                          <span>Code (Coming Soon)</span>
+                        </a>
+                      </span>
+
+                       <!-- TODO: Replace with OneDrive dataset URL -->
+                      <span class="link-block">
+                        <a href="https://onedrive.live.com/YOUR-DATASET-LINK" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fas fa-database"></i>
+                          </span>
+                          <span>Dataset (Coming soon)</span>
+                        </a>
+                      </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/busch_paths_proposed_runs.jpg" 
+           alt="Teaser image" 
+           style="width:100%; height:auto;">
+
+      <!-- Teaser description -->
+      <h2 class="subtitle has-text-centered">
+        In Busch‑6KM, Busch Campus at Rutgers University was divided into 25 trajectories. A Clearpath Jackal UGV was teleoperated along these trajectories in both directions, collecting imagery, orientation, GPS, and Wi‑Fi RSSI and FTM data.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Overview blurb (More verbose)-->
+<!--
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+
+          <p>
+            Busch‑6KM is a visual navigation dataset collected on the Busch Campus of Rutgers University in New Jersey, United States during the Summer and Fall of 2024 and 2025. It supports the development and evaluation of deep learning–based models for navigation and visual place recognition, particularly those fusing Wi‑Fi and visual data. The dataset consists of timestamps, synchronized RGB (8‑bit) and depth (16‑bit) imagery at VGA resolution (640×480), controller inputs, and ground‑truth GPS and Wi‑Fi Fine Timing Measurements (FTM). Data was gathered using a Clearpath Jackal UGV equipped with an Intel RealSense D435 camera and a Google Pixel 3a smartphone. The Pixel 3a, mounted on the robot and connected via Bluetooth, logged GPS, compass direction, and Wi‑Fi measurements (FTM and RSSI) through a custom Android app. To support the collection of FTM data, three Google Nest Pro routers were placed along each path and powered by portable battery banks, with their GPS coordinates recorded.
+          </p>
+
+          <p>
+            The Jackal UGV was teleoperated by a human across the trajectories using a wireless DualShock controller constrained to discrete actions: 0.25 m forward/backward and 15° left/right rotations. After each action, a timestamp was logged, images were captured, and the Pixel 3a was queried for GPS, compass orientation, and Wi‑Fi FTM data. Each trajectory directory contains RGB, raw depth, and normalized depth images, along with JSON files: one recording router MAC addresses and GPS locations, and another storing a timestamp‑ordered dictionary of controller actions, image paths, FTM/RSSI values, GPS, and compass direction. To capture complementary perspectives, every path was traversed in both directions, covering most of the campus sidewalk network, including academic buildings, statues, and open fields, with forward passes labeled as 1 and backward passes as 2 (e.g., <code>path_6_1</code>, <code>path_6_2</code>). In total, the dataset contains 35 trajectories spanning 19 unique paths (25 originally proposed), with distances ranging from 87 m to 253 m (170 m on average, stdev 46 m, median 178 m). Altogether, this amounts to 26,570 synchronized UNIX‑timestamped images and sensor readings, or 228 minutes (≈3.8 hours) of footage, with individual trajectories lasting between 3 and 16 minutes (mean 6.5, stdev 2.9, median 5.6). A PyQt‑based GUI viewer (shown below) was developed to make browsing and inspecting the dataset straightforward.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<!-- End overview blurb -->
+
+<!-- Overview blurb (Less verbose)-->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+
+          <p>
+            Busch‑6KM is a visual navigation dataset collected on Busch Campus, Rutgers University (New Jersey, United States) during the Summer and Fall of 2024 and 2025. The dataset is intended to support research in visual navigation and visual place recognition, particularly approaches that fuse Wi‑Fi sensing with visual data.
+          </p>
+
+          <p>
+            The campus was divided into 25 planned trajectories spanning sidewalks and roads. A Clearpath Jackal UGV was teleoperated by a human along each trajectory in both directions, producing forward and reverse passes that capture complementary perspectives. During traversal, the robot recorded timestamps, synchronized RGB and depth images, compass orientation, GPS, and Wi‑Fi Received Signal Strength Indicator (RSSI) and Fine Timing Measurements (FTM), covering diverse campus landmarks such as academic buildings and statues.
+          </p>
+
+          <p>
+            In total, Busch‑6KM contains 35 traversals across 19 unique trajectories (out of the 25 originally proposed), with lengths ranging from 87–253 m (170 m on average). Altogether, this amounts to 26,570 images and sensor data, or about 228 minutes of data, with individual trajectories lasting between 3 and 16 minutes (6.5 minutes average). A PyQt‑based GUI viewer (shown below) was developed to make browsing and inspecting the dataset straightforward.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End overview blurb -->
+
+<!-- Image carousel -->
+ <!--
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item">
+      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+-->
+<!-- End image carousel -->
+
+<!-- Youtube video -->
+ <!-- 
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ -->
+<!-- End youtube video -->
+
+<!-- Video carousel (for example paths)-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Some Example Paths Visualized</h2>
+      <div id="carousel-wrapper">
+        <div id="results-carousel"></div>
+      </div>
+      <div id="caption"></div>
+      <div id="dots"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+#carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#results-carousel {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  background: black;
+  overflow: hidden;
+}
+.carousel-item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 150ms ease;
+}
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+}
+.carousel-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: black;
+}
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+#prev:hover, #next:hover {
+  opacity: 1;
+}
+#prev { left: -3rem; }
+#next { right: -3rem; }
+#caption {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+#dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+</style>
+
+<script>
+const videos = [
+  "compressed_path_2_1.mp4",
+  "compressed_path_2_2.mp4",
+  "compressed_path_16_1.mp4",
+  "compressed_path_16_2.mp4",
+  "compressed_path_19_1.mp4",
+  "compressed_path_19_2.mp4",
+  "compressed_path_25_1.mp4",
+  "compressed_path_25_2.mp4"
+]
+
+function makeCaption(filename) {
+  const match = filename.match(/compressed_path_(\d+)_(\d)\.mp4/)
+  if (!match) return filename
+  const pathNum = match[1]
+  const dir = match[2] === "1" ? "forward" : "reverse"
+  return `Path ${pathNum} in the ${dir} direction visualized in the dataset viewer (left: Google Maps aerial view with marked routers, bottom right: Jackal UGV camera feed, top right: timestamps, actions, and sensor data)`
+}
+
+const root = document.getElementById("results-carousel")
+const dots = document.getElementById("dots")
+const captionBox = document.getElementById("caption")
+
+const prevBtn = document.createElement("button")
+prevBtn.id = "prev"
+prevBtn.className = "button is-dark is-rounded"
+prevBtn.textContent = "‹"
+root.parentElement.appendChild(prevBtn)
+
+const nextBtn = document.createElement("button")
+nextBtn.id = "next"
+nextBtn.className = "button is-dark is-rounded"
+nextBtn.textContent = "›"
+root.parentElement.appendChild(nextBtn)
+
+const items = []
+let current = 0
+
+videos.forEach((file, i) => {
+  const item = document.createElement("div")
+  item.className = "carousel-item"
+
+  const video = document.createElement("video")
+  video.controls = true
+  video.muted = true
+  video.loop = false
+  video.preload = "auto"
+  video.autoplay = false
+
+  const source = document.createElement("source")
+  source.src = `static/campus_videos/${file}`
+  source.type = "video/mp4"
+  video.appendChild(source)
+
+  item.appendChild(video)
+  root.appendChild(item)
+
+  video.addEventListener("ended", () => {
+    next()
+  })
+
+  items.push({container: item, video, caption: makeCaption(file)})
+
+  const dot = document.createElement("button")
+  dot.className = "button is-small"
+  dot.textContent = "●"
+  dot.style.lineHeight = "1"
+  dot.style.padding = "0.25rem 0.5rem"
+  dot.addEventListener("click", () => {
+    goTo(i)
+  })
+  dots.appendChild(dot)
+})
+
+function updateDots() {
+  Array.from(dots.children).forEach((d, i) => {
+    if (i === current) {
+      d.classList.add("is-dark")
+    } else {
+      d.classList.remove("is-dark")
+    }
+  })
+}
+
+function show(i) {
+  items.forEach((it, idx) => {
+    if (idx === i) {
+      it.container.classList.add("active")
+    } else {
+      it.container.classList.remove("active")
+      it.video.pause()
+      it.video.currentTime = 0
+    }
+  })
+  const v = items[i].video
+  if (v.readyState >= 2) {
+    v.play().catch(() => {})
+  } else {
+    v.addEventListener("canplay", function handler() {
+      v.removeEventListener("canplay", handler)
+      v.play().catch(() => {})
+    })
+    v.load()
+  }
+  captionBox.textContent = items[i].caption
+  const nextIndex = (i + 1) % items.length
+  const nv = items[nextIndex].video
+  if (nv.readyState < 2) nv.load()
+  updateDots()
+}
+
+function next() {
+  current = (current + 1) % items.length
+  show(current)
+}
+
+function prev() {
+  current = (current - 1 + items.length) % items.length
+  show(current)
+}
+
+function goTo(i) {
+  current = i
+  show(current)
+}
+
+nextBtn.addEventListener("click", next)
+prevBtn.addEventListener("click", prev)
+
+if (items.length > 0) show(0)
+</script>
+<!-- End video carousel -->
+
+<!-- Paper poster -->
+<!--
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+-->
+<!--End paper poster -->
+
+<!-- Equipment and Data Collection -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Equipment and Data Collection</h2>
+        <div class="content has-text-justified">
+
+          <ul>
+            <li><strong>Clearpath Jackal UGV:</strong> Mobile robot platform with onboard mini‑ITX Linux computer running ROS 1 Noetic (Ubuntu 20.04) and Python 3.9; teleoperated by a human along trajectories across campus.</li>
+            <li><strong>DualShock Controller:</strong> Used to teleoperate the Jackal UGV via discrete actions: d‑pad up/down move 0.25 m and square/circle rotate 15°. Connected to the Jackal UGV via Bluetooth.</li>
+            <li><strong>Intel RealSense D435 Camera:</strong> Mounted on the Jackal UGV and connected to its onboard computer; captures synchronized RGB (8‑bit) and depth (16‑bit) images at 640×480 resolution by querying the camera ROS topic.</li>
+            <li><strong>Google Pixel 3a Smartphone:</strong> Velcroed on top of the Jackal UGV and running LineageOS 22.2 (Android 15); picks up beacon frames from the Nest routers using onboard sensors. A custom Android app connects to the Jackal UGV over Bluetooth, receives data request commands, queries GPS, FTM, and orientation sensors, and sends results back to the Jackal UGV.</li>
+            <li><strong>Google Nest Pro Routers (×3):</strong> Emit Wi‑Fi beacon frames for FTM/RSSI ranging; GPS coordinates recorded manually using a Pixel 3a phone and displayed in the dataset viewer.</li>
+            <li><strong>Portable Battery Banks (x3):</strong> Power the Wi‑Fi routers during data collection.</li>
+            <li><strong>Laptop:</strong> Connects to remote desktop on the Jackal UGV's onboard computer via phone hotspot to run the data collection script.</li>
+          </ul>
+
+          <p>
+            After every controller action, the Jackal UGV receives the input, logs a UNIX timestamp, queries the RealSense ROS topic for RGB and depth images, and sends a Bluetooth data request to the Pixel 3a custom app for GPS, compass orientation, and Wi‑Fi FTM data. Images are stored as PNGs in <code>rgb_imgs</code>, normalized depth is stored as PNGs <code>depth_images</code>, and raw depth arrays are stored as npys in <code>depth_info</code>. Timestamps, actions, and sensor data are stored in <code>log.json</code>, a nested dictionary keyed by timestamp. Router GPS locations are stored in <code>routers.json</code>, organized by MAC address. Each path is traversed forward and backward (e.g., <code>path_6_1</code>, <code>path_6_2</code>) to capture complementary perspectives.
+          </p>
+
+          <h3 class="title is-4">Dataset Folder Structure</h3>
+          <pre>
+paths/
+├── path_6_1/
+│   ├── log.json
+│   ├── raw_log.json
+│   ├── routers.json
+│   ├── README
+│   ├── rgb_imgs/
+│   │   └── rgb_[timestamp].png
+│   ├── depth_images/
+│   │   └── depth_[timestamp].png   (normalized 8‑bit)
+│   └── depth_info/
+│       └── depth_[timestamp].npy   (original 16‑bit)
+├── path_6_2/
+│   └── ...
+└── ...
+          </pre>
+
+          <ul>
+            <li><code>log.json</code>/<code>raw_log.json</code>: Dictionary of dictionaries; <code>raw_log.json</code> is the original file, <code>log.json</code> has some slight post-processing (filling in missing GPS/FTM data).</li>
+            <li><code>routers.json</code>: Router location data; dictionary keyed by MAC address with router ID, latitude, and longitude.</li>
+            <li><code>README</code>: Path name, direction, and notes.</li>
+            <li><code>depth_images</code>: Normalized 8‑bit depth PNGs (<code>depth_[timestamp].png</code>).</li>
+            <li><code>depth_info</code>: Original 16‑bit depth arrays (<code>depth_[timestamp].npy</code>).</li>
+            <li><code>rgb_imgs</code>: RGB PNGs (<code>rgb_[timestamp].png</code>).</li>
+          </ul>
+
+          <h3 class="title is-4">Sample log.json Entry</h3>
+          <pre>
+{
+  "1727015642.8707535": {
+    "action": "start",
+    "rgb_img": "rgb_imgs/rgb_1727015642.8707535.png",
+    "depth_img": "depth_imgs/depth_1727015642.8707535.png",
+    "depth_npy": "depth_info/depth_1727015642.8707535.npy",
+    "rtt": {
+      "90:ca:fa:83:0a:7a": {"ftm": 7.256, "rssi": -79.8},
+      "90:ca:fa:83:0c:d2": {"ftm": 72.876, "rssi": -98.8},
+      "90:ca:fa:82:fd:ff": {"ftm": 54.339, "rssi": -89.8}
+    },
+    "orientation": {"degree": 47.163692, "direction": "NE"},
+    "gps": {
+      "lat": 40.52272164,
+      "lon": -74.46142029,
+      "alt": -0.386505126953125,
+      "dist": 0,
+      "acc": 3.7900925
+    }
+  },
+  ...
+}
+          </pre>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Equipment and Data Collection -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX (Coming Soon)</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{YourPaperKey2026,
+  title={Your Paper Title Here},
+  author={Ryan Meegan, Adam D'Souza, Kristin Dana},
+  journal={CVPR},
+  year={2026},
+  url={https://your-domain.com/your-project-page}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
